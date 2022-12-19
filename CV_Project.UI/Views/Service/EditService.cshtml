@@ -1,0 +1,22 @@
+﻿@model CV_Project.Entity.Concretes.Service
+@{
+    ViewData["Title"] = "EditService";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("EditService", "Service", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.ServiceID)
+
+    @Html.Label("Hizmet Başlığı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+  
+    @Html.Label("Resim Yolu")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+  
+
+    <button class="btn btn-outline-success">Güncelle</button>
+}
